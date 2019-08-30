@@ -247,7 +247,7 @@ set -eux; \
 COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/
 
 # =========== Add executable permissions ============
-RUN chmod +x /usr/local/bin/docker-php-ext-* ; \
+RUN chmod +x /usr/local/bin/docker-php-* ; \
 # =========== End executable permissions ============
 
 # sodium was built as a shared module (so that it can be replaced later if so desired), so let's enable it too (https://github.com/docker-library/php/issues/598)
