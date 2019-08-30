@@ -8,12 +8,12 @@ FROM debian:stretch-slim
 
 LABEL maintainer "DingTalk: gkhklxl; Email: zhoujianchang@puget-inc.com"
 
-RUN sed -i "s:deb http\://deb.debian.org:deb http\://mirrors.aliyun.com:g" /etc/apt/sources.list && \
-sed -i "s:deb http\://security.debian.org:deb http\://mirrors.aliyun.com:g" /etc/apt/sources.list ; \
+#RUN sed -i "s:deb http\://deb.debian.org:deb http\://mirrors.aliyun.com:g" /etc/apt/sources.list && \
+#sed -i "s:deb http\://security.debian.org:deb http\://mirrors.aliyun.com:g" /etc/apt/sources.list ; \
 
 # prevent Debian's PHP packages from being installed
 # https://github.com/docker-library/php/pull/542
-set -eux; \
+RUN set -eux; \
 	{ \
 		echo 'Package: php*'; \
 		echo 'Pin: release *'; \
