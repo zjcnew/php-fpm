@@ -29,7 +29,7 @@ docker pull zjcnew/php-fpm:7.2.21
 ##### 2.从Dockerfile文件构建
 
 ```
-git clone -b 7.2.21 https://github.com/zjcnew/php-fpm.git
+git clone -b master https://github.com/zjcnew/php-fpm.git
 cd php-fpm
 docker build --no-cache -f Dockerfile -t php-fpm:7.2.21 .
 ```
