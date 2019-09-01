@@ -274,11 +274,15 @@ RUN set -eux; \
 	fi; \
 	{ \
 		echo '[global]'; \
-		echo 'error_log = /proc/self/fd/2'; \
+# ========================== Optimizing log files =========================
+		echo 'error_log = /usr/local/var/log/php-fpm.log'; \
 		echo; \
 		echo '[www]'; \
 		echo '; if we send this to /proc/self/fd/1, it never appears'; \
-		echo 'access.log = /proc/self/fd/2'; \
+		echo 'access.log = /usr/local/var/log/\$pool.access.log'; \
+		echo; \
+		echo 'slowlog = /usr/local/var/log/\$pool.log.slow;' \
+# ========================== End Optimizing log files =====================
 		echo; \
 		echo 'clear_env = no'; \
 		echo; \
