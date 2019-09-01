@@ -279,9 +279,9 @@ RUN set -eux; \
 		echo; \
 		echo '[www]'; \
 		echo '; if we send this to /proc/self/fd/1, it never appears'; \
-		echo 'access.log = /usr/local/var/log/\$pool.access.log'; \
+		echo 'access.log = /usr/local/var/log/$pool.access.log'; \
 		echo; \
-		echo 'slowlog = /usr/local/var/log/\$pool.log.slow;' \
+		echo 'slowlog = /usr/local/var/log/$pool.slow.log;' \
 # ========================== End Optimizing log files =====================
 		echo; \
 		echo 'clear_env = no'; \
