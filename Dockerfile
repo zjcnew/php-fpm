@@ -204,7 +204,7 @@ set -eux; \
                 --enable-mbregex --enable-sockets \
                 --enable-zip --enable-soap \
                 --with-gettext --enable-session \
-                --with-curl --enable-opcache \
+                --with-curl \
                 --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ --with-freetype-dir=/usr/include/ \
                 --with-libxml-dir --enable-bcmath \
                 --enable-intl --enable-pcntl \
