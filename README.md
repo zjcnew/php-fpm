@@ -24,18 +24,18 @@ redis
 两种方式选择
 ##### 1.从官方仓库拉取
 ```
-docker pull zjcnew/php-fpm:7.2.21
+docker pull zjcnew/php-fpm:7.2.22
 ```
 ##### 2.从Dockerfile文件构建
 
 ```
 git clone -b master https://github.com/zjcnew/php-fpm.git
 cd php-fpm
-docker build --no-cache -f Dockerfile -t php-fpm:7.2.21 .
+docker build --no-cache -f Dockerfile -t php-fpm:7.2.22 .
 ```
 #### 运行容器
 ```
-docker run -d -v /data/html:/usr/share/nginx/html --name php zjcnew/php-fpm:7.2.21
+docker run -d -v /data/html:/usr/share/nginx/html --name php zjcnew/php-fpm:7.2.22
 ```
 #### 查看加载的php扩展
 ```
